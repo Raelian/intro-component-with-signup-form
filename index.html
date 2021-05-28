@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="index.css" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    footer {position: absolute; bottom: 20px; left: 40%;}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="container-one">
+      <h1 class="container-one__title">Learn to code by watching others</h1>
+      <p class="container-one__text">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+
+    <div class="container-two">
+      <button class="container-two__try-btn"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+
+      <form action="#" class="container-two__form">
+        <div class="container-two__input-wrap">
+          <input 
+            type="text" 
+            class="container-two__input" 
+            id="first-name" 
+            placeholder="First Name" 
+            required
+          >
+          <span class="container-two__error-icon container-two__error-icon--hide"></span>
+          <p class="container-two__error-text container-two__error-text--hide">First Name cannot be empty</p>
+        </div>
+        
+        <div class="container-two__input-wrap">
+          <input
+            type="text"
+            class="container-two__input" 
+            id="last-name" 
+            placeholder="Last Name" 
+            required
+          >
+          <span class="container-two__error-icon container-two__error-icon--hide"></span>
+          <p class="container-two__error-text container-two__error-text--hide">Last Name cannot be empty</p>
+        </div>
+        
+        <div class="container-two__input-wrap">
+          <input
+            type="email"
+            class="container-two__input"
+            id="email"
+            placeholder="Email Address"
+            required
+          >
+          <span class="container-two__error-icon container-two__error-icon--hide"></span>
+          <p class="container-two__error-text container-two__error-text--hide">Looks like this is not an email</p>
+        </div>
+        
+        <div class="container-two__input-wrap">
+          <input
+            type="password"
+            class="container-two__input"
+            id="password"
+            placeholder="Password"
+            required
+          >
+          <span class="container-two__error-icon container-two__error-icon--hide"></span>
+          <p class="container-two__error-text container-two__error-text--hide">Password cannot be empty</p>
+        </div>
+        
+        <button type="submit" class="container-two__submit">Claim your free trial</button>
+        <p class="container-two__terms">
+          By clicking the button, you are agreeing to our
+          <a href="#">Terms and Services</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      <br> 
+      Coded by <a href="https://www.frontendmentor.io/profile/Raelian">Rael</a>.
+    </p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

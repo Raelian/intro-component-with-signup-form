@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Primary colors */
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+/* Accent colors */
+$blue: hsl(248, 32%, 49%);
+
+/* Neutral colors */
+$drk-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+/* Custom colors */
+$cc-box-shadow1: hsla(249, 10%, 26%, .3);
+$cc-box-shadow2: hsl(154, 53%, 45%);
+$cc-border: hsla(249, 10%, 26%, .2);
+$cc-blue-focus: hsl(249, 27%, 56%);
+$cc-green-focus: hsl(154, 59%, 67%); 
+
+/* Default font */
+$ff-poppins: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $ff-poppins;
+}
+
+html,
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(images/bg-intro-mobile.png);
+    background-position: fixed;
+    background-color: $red;
+}
+
+.wrapper {
+    margin: 94px 24px 68px;
+    min-width: 300px;
+}
+
+.container-one {
+    color: white;
+    text-align: center;
+
+    &__title {
+        font-size: 1.7rem;
+        line-height: 2.1rem;
+    }
+
+    &__text {
+        margin-top: 28px;
+    }
+}
+
+.container-two {
+
+    &__try-btn {
+        margin-top: 66px;
+        width: 100%;
+        height: 88px;
+        background-color: $blue;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        padding: 0 60px;
+        font-size: 1rem;
+        box-shadow: 0 7px $cc-box-shadow1;
+        cursor: pointer;
+        font-weight: 300;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            background-color: $cc-blue-focus;
+        }
+
+        > span {
+            font-weight: 600;
+        }
+    }
+
+    &__form {
+        margin-top: 26px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 24px 24px 30px;
+        box-shadow: 0 7px $cc-box-shadow1; 
+    }
+
+    &__input-wrap {
+        margin-bottom: 15px;
+        position: relative;   
+    }
+
+    &__input {
+        height: 56px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $cc-border;
+        outline: none;
+        font-weight: 700;
+        padding: 22px 18px;
+
+        &--error {
+            border-color: $red;
+            border-width: 2px;
+            color: $red;
+        }
+
+        &--error::placeholder {
+            color: transparent;
+        }
+
+        &:focus,
+        &:hover {
+            border-color: $drk-blue;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    &__error-icon {
+        background-image: url("images/icon-error.svg");
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        
+        &--hide {
+            display: none;
+        } 
+    }
+
+    &__error-text {
+        color: $red;
+        font-size: .75rem;
+        font-weight: 500;
+        font-style: italic;
+        text-align: right;
+        width: 100%;
+        margin-top: .4rem;
+        
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        height: 52px;
+        background-color: $green;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .9rem;
+        letter-spacing: .1rem;
+        box-shadow: 0 4px $cc-box-shadow2;
+        cursor: pointer;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            background-color: hsl(154, 59%, 67%);
+        }
+    }
+
+    &__terms {
+        color: $grayish-blue;
+        font-size: .66rem;
+        padding: 0 20px;
+        margin-top: 8px;
+        text-align: center;
+        line-height: 1.2rem;
+
+        > a {
+            text-decoration: none;
+            color: $red;
+            font-weight: 700;
+            outline: none;
+
+            &:focus,
+            &:hover {
+                color: white;
+                background-color: $red;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    
+    .wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    html,
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 1110px;
+        margin-top: 120px;
+        height: 560px;
+    }
+
+    .container-one {
+        width: 570px;
+        text-align: left;
+        padding-top: 175px;
+        padding-right: 76px;
+
+        &__title {
+            font-size: 3rem;
+            line-height: 3.4rem;
+        }
+    }
+
+    .container-two {
+        width: 540px;
+
+        &__try-btn {
+            margin-top: 0;
+            height: 60px;
+            font-weight: thin;
+        }
+
+        &__form {
+            padding: 40px;
+        }
+
+        &__input-wrap {
+            margin-bottom: 20px;
+        }
+
+        &__input {
+            padding: 26px 34px;
+        }
+
+        &__error-icon {
+            right: 25px;
+        }
+
+        &__error-text {
+            font-size: .65rem;
+        }
+
+        &__terms {
+            margin-top: 16px;
+        }
+    }
+}
+
